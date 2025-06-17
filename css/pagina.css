@@ -1,0 +1,186 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Corpo da página */
+body {
+  font-family: 'Playfair Display', serif, Georgia, 'Times New Roman', Times;
+  background-color: #daccd8;
+  color: #333333;
+  line-height: 1.6;
+  /*padding-top: 120px;  Espaço para o header fixo */
+}
+
+/*ajeita a imagem do banner*/
+#principal {
+  margin: 0;
+  padding: 0;
+}
+
+#principal img {
+  display: block;       /* remove espaços indesejados de imagem inline */
+  margin: 0;
+  padding: 0;
+  width: 100%;          /* ou o tamanho que você quiser */
+}
+
+/*menu*/
+header {
+  position: fixed;    /*alinha o tamanho e tals*/
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+
+  background-color: #daccd8;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.menu {
+  display: flex;
+  justify-content: flex-end; /* empurra o menu para a direita */
+  align-items: center;
+  padding: 20px 40px; /* espaçamento ao redor do menu */
+}
+
+.menu ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+    align-items: right;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #333333;
+  font-weight: 500;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+nav.menu a:hover {
+  color: #b48a78;
+}
+
+/* submenus */
+.submenu {
+  position: relative;
+}
+
+.submenu .sub-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-radius: 6px;
+  padding: 10px 0;
+  min-width: 180px;
+  z-index: 1001;
+}
+
+.submenu:hover .sub-menu {
+  display: block;
+}
+
+.submenu .sub-menu li {
+  padding: 8px 20px;
+}
+
+.submenu .sub-menu li a {
+  color: #333;
+  text-decoration: none;
+  display: block;
+  transition: background 0.3s;
+}
+
+.submenu .sub-menu li a:hover {
+  background-color: #f3e9f0;
+}
+
+
+/* Conteúdo principal */
+main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Seções */
+section {
+  margin-bottom: 60px;
+}
+
+section h1 {
+  font-size: 40px;
+  margin-bottom: 20px;
+  color: #b48a78;
+}
+
+section h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  color: #b48a78;
+}
+
+section h3 {
+  font-size: 25px;
+  margin-bottom: 20px;
+  color: #b48a78;
+}
+
+section h4 {
+  font-size: 18px;
+  margin-bottom: 20px;
+  color: #b48a78;
+}
+
+section p {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+section a {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #b48a78;
+  text-decoration: none;
+}
+
+
+/* Imagens */
+section img {
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  margin-top: 20px;
+}
+
+
+/* Rodapé */
+footer {
+  position: relative;
+  width: 100%;
+  height: 15%;
+  background-color:#daccd8;
+  background-image: url('img/logomarca.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+
+  padding: 20px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
